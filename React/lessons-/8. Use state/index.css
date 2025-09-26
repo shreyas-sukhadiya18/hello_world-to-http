@@ -1,0 +1,25 @@
+.counter-container{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.count-display{
+  font-size: 5em;
+  margin-top: 0;
+  margin-bottom: 50px;
+
+}
+
+.counter-incr{
+  margin: 0px 10px;
+  background-color: antiquewhite;
+  border: none;
+  border-radius: 5px ;
+  font-size: 30px;
+
+}
+.counter-incr:hover{
+  background-color: rgb(122, 206, 206);
+  color: white;
+}

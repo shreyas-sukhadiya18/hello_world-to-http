@@ -1,0 +1,30 @@
+.styling{
+    border: 2px solid gray;
+    border-radius: 4px;
+    margin: 5px;
+    display: inline-block;
+    
+    
+}
+div:hover {
+    animation:  colorrs 2s ;
+}
+
+
+@keyframes colorrs {
+    0%{
+        background-color: red;
+    }
+    25%{
+        background-color: rgb(36, 23, 23);
+    }
+    50%{
+        background-color: green;
+    }
+    75%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: gray;
+    }
+}

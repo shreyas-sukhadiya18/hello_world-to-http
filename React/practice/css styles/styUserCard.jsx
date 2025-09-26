@@ -1,0 +1,3 @@
+/*
+add a hover effect that changes the back color of the card
+use flexbox to align the card in a agrid layout */

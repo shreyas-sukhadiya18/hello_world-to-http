@@ -1,0 +1,19 @@
+.h3{
+  border: 3px solid orange;
+  background-color: antiquewhite;
+  font-size: 2rem;
+  margin: 10px;
+  text-align: center;
+  
+}
+
+.ol{
+  list-style: none;
+  text-align: center;
+  border: 3px solid orange;
+}
+
+.ol li:hover{
+  color: aqua;
+  cursor: pointer;
+}
