@@ -1,0 +1,251 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black'); 
+@import url('https://fonts.cdnfonts.com/css/poppins');
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    border: border-box;
+    /* set the heith and width in only given area. extra space boes not use  */
+}
+body{
+    background-color: #ffe4c4a3
+}
+
+.navbar {
+    height: 60px;
+    background-color:#f4cb9b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Box-1 */
+/* .nav-logo {
+    height: 54px;
+    width: 70px;
+} */
+
+.logo {
+    background-image: url("logo\(strawhat\).jpg");
+    height: 58px;
+    width: 65px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.border {
+    border: 1.5px solid transparent;
+}
+
+.border:hover {
+    border: 1.5px solid #cccccc;
+}
+
+/* Box-2 */
+.add-first {
+    color: #cccccc;
+    font-size: 0.85rem;
+    margin-left: 15px;
+}
+
+.add-second {
+    /* padding: 0px 0px 1px; */
+    font-size: 1rem;
+    margin-left: 3px;
+}
+
+.add-icon {
+    display: flex;
+    align-items: center;
+}
+
+/* Box-3 */
+.nav-search{
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    
+}
+.nav-search:hover{
+    border: 2px solid orange;
+}
+.nav-select{
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+.search-input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+
+.search-icon{
+    width: 45px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.2rem;
+   background-color: #f6b054;
+   color: black;
+   border-top-right-radius: 4px;
+   border-bottom-right-radius: 4px;
+   cursor: pointer;
+}
+
+/* Box-4 */
+
+span{
+    font-size: 0.7rem;
+}
+.nav-second{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+
+/* Box-6 */
+.nav-cart i{
+font-size: 30px;}
+.nav-cart{
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Panel */
+.panel{
+    display: flex;
+    height: 40px;
+    background-color: #222f3d ;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.panel-all i{
+    cursor: pointer;
+}
+.panel-ops p{
+    display: inline;
+    margin-left: 15px;
+}
+.panel-ops{
+    width: 70%;
+    font-size: 0.85rem;
+   
+}
+.panel-deals{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* main file  */
+.banner {
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .slider {
+    position: absolute;
+    /* changed to 200 */
+    width: 100px;
+    /* changed by 250 */
+    height: 150px;
+    top: 10%;
+    /* changed by 100px */
+    left: calc(50% - 50px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+
+@keyframes autoRun {
+    from {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .item {
+    position: absolute;
+    inset: 0 0 0 0;
+    transform:rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        /* changed to 550 */
+    translateZ(300px);
+
+}
+
+.banner .slider .item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1400px, 99vw);
+    height: max-content;
+    padding-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size:3em;
+    line-height: 1em;
+    color: bisque;
+    /* color: rgb(255, 231, 202); */
+    position: relative;
+    
+}
+.banner .content h1::after{
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    z-index: 2;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.613);
+    color: transparent;
+}
+.banner .content .author {
+    font-family: Poppins;
+    text-align: right;
+    max-width: 200px;
+}
+.banner .content h2{
+    font-size: 3em;
+}
+.banner .content .model {
+    background-image: url(main_image.png);
+    width: 100%;
+    height: 75vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto 130%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: 1;
+}

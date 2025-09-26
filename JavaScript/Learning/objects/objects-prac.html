@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+            let product1 ={
+            price: 10,
+            item_name: 'pen',
+            // bracket notation
+            'delivery-time': 'monday',
+        }
+        // let copyProduct = product;
+        // console.log(copyProduct.price)
+        // copyProduct.price=20;
+        // console.log(copyProduct.price)
+
+        // for print bracket notation  this will not access by .operator
+        // console.log(copyProduct['delivery-time']);
+
+
+
+        // destructure message
+        let obj = {
+            message: 'hello',
+            name: 'shreyas',
+        }
+        // destructure the object
+        let { message, name } = obj;
+        console.log(message);
+        console.log(name)
+
+
+        // comapre two product objects (deep code)
+        function isIdenticalProduct(product1, product2) {
+            // "==" or "===" is same for this situation
+            if (typeof product1 === 'object' || typeof product2 === 'object') {
+                if (product1 == product2) {
+                    return true;
+                }
+            }
+            else {return false}
+            if(product1.item_name === product2.item_name &&
+            product1.price === product2.price)
+            {
+                return true;
+            }
+            else {return false}
+        }
+        let product2 ={
+            price: 10,
+            item_name: 'pen',
+            // bracket notation
+            'delivery-time': 'tuesday',
+        }
+
+        console.log(isIdenticalProduct(product1,product2));
+
+    </script>
+
+</body>
+
+</html>

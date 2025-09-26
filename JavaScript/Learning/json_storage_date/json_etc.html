@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="json.css">
+</head>
+<body>
+    <h3 id="dis">gretiings</h3>
+    <button onclick="clickde()" id="clicked">0</button>
+
+    <script>
+
+        // greetings exercise
+
+        // let date = new Date();
+        // time = date.getHours(); 
+        // console.log(time)
+        // // time = 7;  //just for example
+        // function greetOnTime(time,name ='shreyas'){
+        //     if(time >=7 && time <= 12){
+        //         document.querySelector('#dis').innerText = 'Good morning';
+        //     }
+        //     else if(time >= 12 && time <= 20){
+        //         document.querySelector('#dis').innerText = 'Good afternoon';
+        //     }
+        //     else{
+        //         document.querySelector('#dis').innerText = `it's ${time} : ${date.getMinutes()},  Good night ${name}`;
+        //     }
+        // }
+        // greetOnTime(time);
+        // time =22;
+        // greetOnTime(time);
+
+        // greetOnTime(1);
+
+
+// let noOfTimeClicked = localStorage.getItem('counter') || 0;
+    // buttons that shows the how many times clicked
+    let counter = 1;
+    let cn = localStorage.getItem('counter') ;
+    function clickde(){
+        
+        document.querySelector('#clicked').innerText = counter++;
+
+        // check for odd or even
+        if(counter % 2 === 0){
+            document.querySelector('#clicked').classList.add('odd');
+            document.querySelector('#clicked').classList.remove('even');
+            
+        }
+        else{
+            document.querySelector('#clicked').classList.add('even');
+            document.querySelector('#clicked').classList.remove('odd');
+        }
+        localStorage.setItem('counter',cn)
+    }
+   
+    </script>
+</body>
+</html>

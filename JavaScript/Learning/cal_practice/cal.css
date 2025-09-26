@@ -1,0 +1,25 @@
+.keyboard{
+    border: 2px solid rgb(100, 95, 95);
+   border-radius: 4px;
+background-color: beige;
+
+}
+#text-disp{
+    margin: 5px;
+    font-size: 25px;
+    width: 85%;
+    
+}
+
+#keys{
+    background-color: rgb(173, 251, 251);
+    width: 20px;
+    height: 25px;
+    margin: 5px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div class="keyboard">
+        <input type="text"  name="" id="text-disp">
+       <div class="buttons">
+        <button onclick="TextDisplay = TextDisplay + 'a';
+        document.querySelector('#text-disp').value = TextDisplay;" id="keys">a</button>
+        <button onclick="TextDisplay = TextDisplay + 's';
+        document.querySelector('#text-disp').value = TextDisplay;" id="keys" id="keys">s</button>
+        <button onclick="TextDisplay = ''
+        document.querySelector('#text-disp').value = TextDisplay;" id="keys" id="keys">y</button>
+        
+       </div>
+    </div>
+
+    <script>
+      let  TextDisplay = '';
+        document.querySelector('#text-disp').value = TextDisplay;
+    </script>
+</body>
+</html>
